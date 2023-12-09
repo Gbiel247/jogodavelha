@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="side-panel">
+        <label for="player1">Participante 1:</label>
+        <input type="text" id="player1" placeholder="Nome do Participante 1">
+        <span id="player1-wins" class="branco">Vitórias: 0</span>
+        <button class="laranja" onclick="registrarParticipante(1)">Registrar</button>
+    </div>
+
+    <div id="game-board">
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+        <div class="quadrado" onclick="clicarCelula(this)"></div>
+    </div>
+
+    <div class="side-panel">
+        <label for="player2">Participante 2:</label>
+        <input type="text" id="player2" placeholder="Nome do Participante 2">
+        <span id="player2-wins" class="branco">Vitórias: 0</span>
+        <button class="laranja" onclick="registrarParticipante(2)">Registrar</button>
+        <label for="computer-checkbox" id="pc" class="branco">Contra o Computador:</label>
+        <input type="checkbox" id="computer-checkbox" onchange="alternarModoComputador()">
+        <button class="laranja" onclick="alternarModoDoisParticipantes()">Dois jogadores</button>
+    </div>
+
+    <div class="botoes-abaixo">
+        <button class="laranja" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+    </div>
+</div>
+</body>
+</html>
